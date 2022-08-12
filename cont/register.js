@@ -3,10 +3,24 @@ function ID(elem) {
 }
 
 function fetchcall() {
-  var data = URLSearchParams();
-  data.append("reg_szoveg", ID("reg_szoveg").value);
+  var data = new URLSearchParams();
   data.append("reg_email", ID("reg_email").value);
+  data.append("reg_szoveg", ID("reg_szoveg").value);
   data.append("reg_jelszo", ID("reg_jelszo").value);
 
-  fetch();
+  fetch("regisztracio.php", {
+    method: "post",
+    body: data,
+  })
+    .then(function (response) {
+      return response.text();
+    })
+    .then(function (text) {
+      console.log(text);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+
+  return false;
 }

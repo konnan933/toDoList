@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To do list bejelentkezés</title>
     <script src="../cont/login.js"></script>
+    <script src="../cont/register.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="fooldal">
       <div class="reg">
-
-          <label for="reg_szoveg"></label>
-
-        <form action="" method="post">
-
+        <form
+          onsubmit="return fetchcall()"
+          method="post"
+          action="regisztracio.php"
+        >
           <input
             required
             type="text"
             name="reg_szoveg"
             id="reg_szoveg"
             placeholder="Felhasználó név"
+            value="asd"
           />
 
           <input
@@ -30,6 +32,7 @@
             name="reg_email"
             id="reg_email"
             placeholder="valami@mail.com"
+            value="asd"
           />
           <input
             required
@@ -37,8 +40,9 @@
             name="reg_jelszo"
             id="reg_jelszo"
             placeholder="Jelszó"
+            value="asd"
           />
-          <button class="regisztracio">Regisztráció</button>
+          <input class="regisztracio" type="submit" value="Regisztráció" />
         </form>
       </div>
       <div class="bej">
