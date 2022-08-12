@@ -4,23 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To do list</title>
-    <script src="../cont/script.js"></script>
+    <title>To do list bejelentkezés</title>
+    <script src="../cont/login.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="cointainer">
-      <div class="fooldal">
-        <div class="reg">
+    <div class="fooldal">
+      <div class="reg">
+        <form action="" method="post">
           <label for="reg_szoveg"></label>
           <input
+            required
             type="text"
             name="reg_szoveg"
             id="reg_szoveg"
             placeholder="Felhasználó név"
           />
+
           <label for="reg_email"></label>
           <input
+            required
             type="text"
             name="reg_email"
             id="reg_email"
@@ -28,17 +31,20 @@
           />
           <label for="reg_jelszo"></label>
           <input
+            required
             type="text"
             name="reg_jelszo"
             id="reg_jelszo"
             placeholder="Jelszó"
           />
-
           <button class="regisztracio">Regisztráció</button>
-        </div>
-        <div class="bej">
+        </form>
+      </div>
+      <div class="bej">
+        <form action="" method="post">
           <label for="bej_szoveg"></label>
           <input
+            required
             type="text"
             name="bej_szoveg"
             id="bej_szoveg"
@@ -46,13 +52,14 @@
           />
           <label for="bej_jelszo"></label>
           <input
+            required
             type="text"
             name="bej_jelszo"
             id="bej_jelszo"
             placeholder="Jelszó"
           />
           <button class="bejelentkezes">Bejentkezés</button>
-        </div>
+        </form>
       </div>
     </div>
   </body>
