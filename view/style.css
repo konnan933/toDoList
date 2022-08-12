@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fooldal {
+  display: flex;
+  border: 1px black solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.reg,
+.bej {
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  margin: auto;
+  margin: 20px;
+}
+label,
+input,
+button {
+  margin: 5px;
+}
