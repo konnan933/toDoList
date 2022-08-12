@@ -1,5 +1,5 @@
 <?php
-class Connection
+class Csatlakozas
 {
     private $host = "localhost";
     private $felhasznaloNev = "root";
@@ -20,7 +20,7 @@ class Connection
         return $eredmeny;
     }
     public function belepes($email, $jelszo){
-        $sql = 'Select if("'.md5($jelszo).'" = jel,true,false) as belep from felhasznalo where "'.$email.'" = email';
+        $sql = 'Select  as belep from felhasznalo where "'.$email.'" = email';
         $valasz = $this->kapcsolat->query($sql);
         $sikeresBelep = false;
         if($valasz->num_rows == 1){
