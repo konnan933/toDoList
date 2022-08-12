@@ -8,7 +8,7 @@ function fetchcall() {
   data.append("reg_szoveg", ID("reg_szoveg").value);
   data.append("reg_jelszo", ID("reg_jelszo").value);
 
-  fetch("../cont/regisztracio.php", {
+  fetch("./cont/regisztracio.php", {
     method: "post",
     body: data,
   })
