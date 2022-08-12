@@ -19,6 +19,10 @@ class Connection
         $eredmeny = $this->kapcsolat->query($sqlInsert);
         return $eredmeny;
     }
+    public function belepes($email, $jelszo){
+        $sql = 'Select if("'.md5($jelszo).'" = jel,true,false) as belep from felhasznalo where "'.$email.'" = email';
+        $valasz = $this->kapcsolat->query($sql);
+        return json_encode($valasz);
+    }
 
-    
 }
