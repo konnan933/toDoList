@@ -22,7 +22,13 @@ class Connection
     public function belepes($email, $jelszo){
         $sql = 'Select if("'.md5($jelszo).'" = jel,true,false) as belep from felhasznalo where "'.$email.'" = email';
         $valasz = $this->kapcsolat->query($sql);
-        return json_encode($valasz);
+        $sikeresBelep = false;
+        if($valasz->num_rows == 1){
+            while($sor = $valasz->fetch_assoc()){
+                $sikeresBelep =  intval($sor["belep"]) == 1 ? true:false;
+            }
+        }
+        return $sikeresBelep;
     }
 
 }
