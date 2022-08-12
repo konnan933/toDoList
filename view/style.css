@@ -5,6 +5,7 @@
 }
 
 .fooldal {
+  width: 30rem;
   display: flex;
   border: 1px black solid;
   position: absolute;
