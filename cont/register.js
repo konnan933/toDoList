@@ -13,9 +13,20 @@ function fetchcall() {
     body: data,
   })
     .then(function (response) {
-      return response.text();
+      console.log(response.url);
+      console.log(window.location.href);
+      
+      /* if(response.sikerE){
+        
+        window.location.assign(response.url);
+      }else{
+        window.location.assign(window.location.href);
+      } */
+      
+      return response.text;
     })
-    .then(function (text) {
+    .then((text) => {
+      
       console.log(text);
     })
     .catch(function (err) {
