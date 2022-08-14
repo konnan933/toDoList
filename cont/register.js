@@ -15,18 +15,17 @@ function fetchcall() {
     .then(function (response) {
       console.log(response.url);
       console.log(window.location.href);
-      
-      /* if(response.sikerE){
-        
+      console.log(window.location.href != response.url);
+      if ("http://localhost/toDoList/cont/regisztracio.php" != response.url) {
         window.location.assign(response.url);
-      }else{
+      } else {
         window.location.assign(window.location.href);
-      } */
-      
+        alert("Már használt e-mail!");
+      }
+
       return response.text;
     })
     .then((text) => {
-      
       console.log(text);
     })
     .catch(function (err) {
