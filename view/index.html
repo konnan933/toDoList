@@ -12,10 +12,7 @@
   <body>
     <div class="fooldal">
       <div class="reg">
-        <form
-          onsubmit="return fetchcall()"
-          method="post" 
-        >
+        <form onsubmit="return fetchcall()" method="post">
           <input
             required
             type="text"
@@ -48,10 +45,11 @@
         <form action="../cont/login.php" method="post" name="log">
           <input
             required
+            class="email"
             type="text"
             name="bej_email"
             id="bej_email"
-            placeholder="valami@gmai.com"
+            value="valami@gmail.com"
           />
 
           <input
@@ -61,7 +59,12 @@
             id="bej_jelszo"
             placeholder="Jelszó"
           />
-          <input class="bejelentkezes" type="submit" value="bejelentkezes" for="log"/>
+          <input
+            class="bejelentkezes"
+            type="submit"
+            value="bejelentkezes"
+            for="log"
+          />
         </form>
       </div>
     </div>
